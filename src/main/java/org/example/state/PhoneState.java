@@ -1,10 +1,10 @@
 package org.example.state;
 
 public abstract class PhoneState {
-    protected Phone phone;
+    protected PhoneContext phoneContext;
 
-    public PhoneState(Phone phone) {
-        this.phone = phone;
+    public PhoneState(PhoneContext phoneContext) {
+        this.phoneContext = phoneContext;
     }
 
     public abstract void lock();

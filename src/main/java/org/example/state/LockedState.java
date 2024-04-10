@@ -1,8 +1,8 @@
 package org.example.state;
 
 public class LockedState extends PhoneState{
-    public LockedState(Phone phone) {
-        super(phone);
+    public LockedState(PhoneContext phoneContext) {
+        super(phoneContext);
     }
 
     @Override
@@ -13,7 +13,7 @@ public class LockedState extends PhoneState{
     @Override
     public void unlock() {
         System.out.println("Desbloqueando smartphone");
-        phone.setState(new ReadyState(phone));
+        phoneContext.setState(new ReadyState(phoneContext));
     }
 
     @Override
@@ -24,6 +24,6 @@ public class LockedState extends PhoneState{
     @Override
     public void power() {
         System.out.println("Desligando a tela");
-        phone.setState(new OffState(phone));
+        phoneContext.setState(new OffState(phoneContext));
     }
 }

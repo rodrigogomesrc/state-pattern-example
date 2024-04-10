@@ -1,11 +1,11 @@
 package org.example.state;
 
-public class Phone {
+public class PhoneContext {
 
     private PhoneState state;
 
-    public Phone() {
-        this.state = new LockedState(this);
+    public PhoneContext() {
+        this.state = new OffState(this);
     }
 
     public void setState(PhoneState state) {
@@ -22,5 +22,9 @@ public class Phone {
 
     public void onHome() {
         state.home();
+    }
+
+    public void onPower() {
+        state.power();
     }
 }
