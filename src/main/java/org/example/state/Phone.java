@@ -13,14 +13,14 @@ public class Phone {
     }
 
     public void onLock() {
-        state.onLock();
+        state.lock();
     }
 
     public void onUnlock() {
-        state.onUnlock();
+        state.unlock();
     }
 
     public void onHome() {
-        state.onHome();
+        state.home();
     }
 }

@@ -7,7 +7,8 @@ public abstract class PhoneState {
         this.phone = phone;
     }
 
-    public abstract void onLock();
-    public abstract void onUnlock();
-    public abstract void onHome();
+    public abstract void lock();
+    public abstract void unlock();
+    public abstract void home();
+    public abstract void power();
 }
